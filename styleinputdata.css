@@ -1,0 +1,106 @@
+/* --- DEVINA_CLASS: ROOT & RESET --- */
+:root {
+    --devina-navy: #0B192C;
+    --devina-light-blue: #1E3E62;
+    --devina-accent-blue: #3B82F6;
+    --devina-cream: #F5EFEB;
+    --devina-gray: #94A3B8;
+    --devina-light-gray: #F8FAFC;
+    --devina-white: #FFFFFF;
+    --devina-black: #0F172A;
+    --devina-shadow: 0 10px 30px -5px rgba(11, 25, 44, 0.15);
+    --devina-hover-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.25);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--devina-cream);
+    color: var(--devina-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+/* --- DEVINA_CLASS: FORM HEADER (H2) --- */
+h2 {
+    color: var(--devina-navy);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* --- DEVINA_CLASS: FORM CONTAINER (FLOATING CARD) --- */
+form#devina_form_teknisi {
+    background: var(--devina-white);
+    width: 100%;
+    max-width: 550px;
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: var(--devina-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+form#devina_form_teknisi:hover {
+    box-shadow: var(--devina-hover-shadow);
+}
+
+/* --- DEVINA_CLASS: LABELS --- */
+form#devina_form_teknisi label {
+    display: block;
+    font-weight: 600;
+    color: var(--devina-navy);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* --- DEVINA_CLASS: INPUT FIELDS --- */
+form#devina_form_teknisi input[type="text"] {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    border: 2px solid var(--devina-light-gray);
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    background: var(--devina-light-gray);
+    color: var(--devina-black);
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem; /* Menyesuaikan jarak bawah */
+}
+
+form#devina_form_teknisi input[type="text"]:focus {
+    border-color: var(--devina-accent-blue);
+    background: var(--devina-white);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* --- DEVINA_CLASS: SUBMIT BUTTON --- */
+form#devina_form_teknisi button[type="submit"] {
+    background: var(--devina-navy);
+    color: var(--devina-white);
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(11, 25, 44, 0.2);
+    margin-top: 1rem;
+}
+
+form#devina_form_teknisi button[type="submit"]:hover {
+    background: var(--devina-accent-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--devina-hover-shadow);
+}

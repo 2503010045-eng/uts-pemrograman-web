@@ -1,0 +1,184 @@
+/* --- DEVINA_CLASS: ROOT & RESET --- */
+        :root {
+            --devina-navy: #0B192C;
+            --devina-light-blue: #1E3E62;
+            --devina-accent-blue: #3B82F6;
+            --devina-cream: #F5EFEB;
+            --devina-yellow: #fae5a6;
+            --devina-gray: #94A3B8;
+            --devina-light-gray: #F8FAFC;
+            --devina-white: #FFFFFF;
+            --devina-black: #0F172A;
+            --devina-shadow: 0 10px 30px -5px rgba(11, 25, 44, 0.15);
+            --devina-hover-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--devina-cream);
+            color: var(--devina-black);
+            overflow-x: hidden;
+        }
+
+        /* --- DEVINA_CLASS: HEADER & HERO --- */
+        .devina_header {
+            background: linear-gradient(135deg, var(--devina-navy), var(--devina-light-blue));
+            color: var(--devina-white);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: var(--devina-shadow);
+            position: relative;
+        }
+
+        .devina_header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.55rem;
+            letter-spacing: 1px;
+        }
+
+        .devina_header h1 span {
+            color: var(--devina-yellow);
+        }
+
+        .devina_header p {
+            color: var(--devina-gray);
+            font-size: 1.1rem;
+        }
+
+        /* --- DEVINA_CLASS: CONTAINER --- */
+        .devina_container {
+            max-width: 900px;
+            margin: -30px auto 4rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- DEVINA_CLASS: CONSULTATION CARD (FLOATING) --- */
+        .devina_consult_card {
+            background: var(--devina-white);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: var(--devina-shadow);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .devina_consult_card:hover {
+            box-shadow: var(--devina-hover-shadow);
+        }
+
+        .devina_section_title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--devina-navy);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- DEVINA_CLASS: FORM STYLING --- */
+        .devina_form_group {
+            margin-bottom: 1.5rem;
+        }
+
+        .devina_form_label {
+            display: block;
+            font-weight: 600;
+            color: var(--devina-navy);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .devina_form_input, 
+        .devina_form_select, 
+        .devina_form_textarea {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid var(--devina-light-gray);
+            border-radius: 12px;
+            font-size: 1rem;
+            outline: none;
+            background: var(--devina-light-gray);
+            color: var(--devina-black);
+            transition: all 0.3s ease;
+        }
+
+        .devina_form_input:focus, 
+        .devina_form_select:focus, 
+        .devina_form_textarea:focus {
+            border-color: var(--devina-accent-blue);
+            background: var(--devina-white);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        .devina_form_textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* --- DEVINA_CLASS: BUTTON --- */
+        .devina_btn_submit {
+            background: var(--devina-navy);
+            color: var(--devina-white);
+            border: none;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(11, 25, 44, 0.2);
+        }
+
+        .devina_btn_submit:hover {
+            background: var(--devina-accent-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--devina-hover-shadow);
+        }
+
+        /* --- DEVINA_CLASS: RESULT BOX --- */
+        .devina_result_box {
+            margin-top: 2rem;
+            background: var(--devina-light-gray);
+            border-left: 5px solid var(--devina-yellow);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            display: none;
+        }
+
+        .devina_result_box h3 {
+            color: var(--devina-navy);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .devina_result_box p {
+            color: var(--devina-gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* --- DEVINA_CLASS: FOOTER COPYRIGHT --- */
+        .devina_footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--devina-white);
+            background: var(--devina-navy);
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        .devina_footer span {
+            color: var(--devina-yellow);
+        }

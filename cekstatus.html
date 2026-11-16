@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cek status</title>
+    <link rel="stylesheet" href="stylecekstatus.css">
+</head>
+<body>
+    <header>
+<div class="devina_container">
+    <div class="devina_header">
+    <h1>Lacak Status Layanan</h1>
+    <p>Masukan nomor resi atau kode transaksi untuk melihat progres terkini</p>
+</div>
+
+
+<form class="devina_search_box" id="devina_form_lacak">
+    <input type="text" id="devina_input_resi" placeholder="Contoh: D&D-2026001"  required>
+    <button type="submit" id="devina_search-box_button">Lacak</button>
+</form>
+    <div id="devina_pesan_error" style="color: #ef4444; display: none; margin-top: 12px; font-size: 14px; font-weight: 500;">
+    Nomor resi tidak ditemukan atau tidak valid. Silakan periksa kembali.
+    </div>
+</div>
+</header>
+
+<div class="devina_status_card" id="devina_hasil_status" style="display: none;">
+    <div class="devina_status_top">
+    <div>
+    <small style="color: #c1d7f5;">nomor_resi</small>
+    <div class="devina_resi_number" id="devina_tampil_resi"></div>
+    </div>
+</div>
+
+    <!-- Riwayat Progres (Timeline) -->
+<div class="devina_timeline_title">Riwayat Progres</div>
+    <ul class="devina_timeline">
+      <li class="devina_timeline_item active">
+        <div class="devina_time">15 Nov 2026 - 13:20 WIB</div>
+        <div class="devina_desc">Sedang Dikerjakan oleh Tim</div>
+        <div class="devina_subdesc">Pesanan sedang dalam tahap pengerjaan utama.</div>
+      </li>
+      <li class="devina_timeline_item">
+        <div class="devina_time">15 Nov 2026 - 10:05 WIB</div>
+        <div class="devina_desc">Verifikasi Pembayaran Berhasil</div>
+        <div class="devina_subdesc">Pesanan masuk ke dalam antrean pengerjaan.</div>
+      </li>
+      <li class="devina_timeline_item">
+        <div class="devina_time">15 Nov 2026 - 09:00 WIB</div>
+        <div class="devina_desc">Pesanan Diterima</div>
+        <div class="devina_subdesc">Data pesanan berhasil dicatat di sistem.</div>
+      </li>
+    </ul>
+
+    <!-- Navigasi Bawah -->
+    <div class="devina_footer_actions">
+      <a href="index.html" class="devina_btn_back">&larr; Kembali ke Beranda</a>
+      <a href="https://wa.me/6285871064029" target="_blank" class="devina_btn_cs">Butuh Bantuan? Hubungi CS</a>
+    </div>
+</div>
+  <script src="cekstatus.js"></script>
+</body>
+</html>

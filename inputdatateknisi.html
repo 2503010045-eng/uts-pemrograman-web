@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Data Teknisi</title>
+    <link rel="stylesheet" href="styleinputdata.css">
+</head>
+<body>
+    <h2>Form Input Pesanan (Teknisi)</h2>
+    <form id="devina_form_teknisi">
+        <div style="margin-bottom: 15px;">
+        <label>Nomor Resi:</label>
+        <input type="text" id="devina_tampil_resi" placeholder="Contoh: D&D-2026005" required>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+        <label>Nama Pelanggan:</label>
+        <input type="text" id="devina_tampil_nama" placeholder="Masukan nama" required>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+        <label>Jenis Layanan:</label>
+        <input type="text" id="devina_tampil_layanan" placeholder="Contoh: Express (1 Hari)" required>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+        <label>Status / Progres Awal:</label>
+        <input type="text" id="devina_tampil_status" placeholder="Contoh: Pesanan Diterima" required><br><br>
+        </div>
+
+        <button type="submit">Simpan Data Resi</button>
+    </form>
+
+    <script>
+        document.getElementById('devina_form_teknisi').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Ambil data yang sudah ada di localStorage (jika belum ada, buat objek kosong)
+            let databaseResi = JSON.parse(localStorage.getItem('data_resi_devina')) || {};
+
+            const resi = document.getElementById('devina_tampil_resi').value.trim().toUpperCase();
+            const nama = document.getElementById('devina_tampil_nama').value.trim();
+            const layanan = document.getElementById('devina_tampil_layanan').value.trim();
+            const status = document.getElementById('devina_tampil_status').value.trim();
+            
+            // Ambil waktu saat ini secara otomatis
+            const waktuSekarang = new Date().toLocaleString('id-ID', { 
+                day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' 
+            }) + ' WIB';
+
+            // Simpan ke dalam objek databaseResi
+            databaseResi[resi] = {
+                nama: nama,
+                layanan: layanan,
+                tglMasuk: waktuSekarang,
+                estimasi: "Menunggu konfirmasi teknisi",
+                progres: [
+                    {
+                        waktu: waktuSekarang,
+                        judul: status,
+                        deskripsi: "Diinput oleh teknisi ke dalam sistem."
+                    }
+                ]
+            };
+
+            // Simpan kembali ke localStorage browser
+            localStorage.setItem('data_resi_devina', JSON.stringify(databaseResi));
+
+            alert("Data resi " + resi + " berhasil disimpan!");
+            this.reset(); // Kosongkan form setelah simpan
+        });
+    </script>
+</body>
+</html>

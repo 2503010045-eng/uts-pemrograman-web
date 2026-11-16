@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service elektronik</title>
+    <link rel="stylesheet" href="styletokoservice.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+<header>
+    <!-- HEADER + NAVIGASI  -->
+  <header id="devina_header">
+   <header id="devina_header">
+    <div class="devina_nav_container">
+      <a href="index.html" class="devina_logo">D&D<span>Service</span></a>
+      
+    <button id="devina_mobile_toggle" aria-label="Buka Menu">&#9776;</button>
+
+    <ul id="devina_nav_menu">
+        <li><a href="#devina_hero" class="devina_active">Home</a></li>
+        <li><a href="cekstatus.html">Cek Status</a></li>
+        <li><a href="jenis_layanan.html">Jenis layanan</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="loginteknisi.html" class="devina_nav_admin_btn">Dashboard Teknisi</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="devina_hero">
+    <div class="devina_hero_container">
+      
+      <!-- Kolom Kiri: Konten Utama -->
+      <div class="devina_hero_content">
+        <span class="devina_badge">Layanan Servis Elektronik Terpercaya & Bergaransi</span>
+        <h1 class="devina_hero_title">Perbaikan Cepat, Transparan, & <span>Terpantau Real-Time</span></h1>
+        <p class="devina_hero_desc">
+          Solusi perbaikan profesional untuk TV, Smartphone, Sound, dan perangkat elektronik lainnya. Pantau progres pengerjaan perangkat Anda kapan saja langsung dari website.
+        </p>
+
+        <div class="devina_hero_buttons">
+          <a href="lihat_estimasi_biaya.html" class="devina_btn_primary">Lihat Estimasi Biaya</a>
+          <a href="konsultasi_kerusakan.html" class="devina_btn_secondary">Konsultasi Kerusakan</a>
+        </div>
+
+        <div class="devina_hero_stats">
+        <div class="devina_stat_item">
+            <h3>1.200++</h3>
+            <p>Unit Berhasil Diperbaiki</p>
+        </div>
+        <div class="devina_stat_item">
+            <h3>30 Hari</h3>
+            <p>Garansi Resmi Servis</p>
+        </div>
+        <div class="devina_stat_item">
+        <h3>100%</h3>
+            <p>Transparansi Biaya</p>
+        </div>
+        </div>
+      </div>
+
+    <!-- Kolom Kanan: Kartu Cek Status Servis Cepat -->
+    <div id="devina_quick_track_card">
+     <h2 class="devina_card_title">Cek Status Perbaikan</h2>
+        <p class="devina_card_subtitle">Masukkan Nomor Resi / ID Servis yang tertera pada nota bukti penerimaan.</p>
+
+     <form id="devina_track_form">
+        <div class="devina_input_group">
+            <label for="devina_resi_input">Nomor Resi / ID Perbaikan</label>
+        </div>
+      <a href="cekstatus.html" id="devina_btn_cek_resi" class="btn-lacak">Lacak Status Sekarang</a>
+      
+     </form>
+
+        <!-- Area Output Hasil Pencarian JS -->
+    <div id="devina_resi_result"></div>
+
+        <p class="devina_sample_hint">Coba masukkan kode sampel: <strong>D&D-2026001</strong> atau <strong>D&D-2026002</strong></p>
+    </div>
+
+    </div>
+
+</section>
+</body>

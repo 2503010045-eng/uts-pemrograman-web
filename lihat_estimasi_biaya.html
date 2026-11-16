@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devina Service Center - Estimasi Biaya Servis</title>
+    <link rel="stylesheet" href="styleestimasibiaya.css">
+    
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="devina_header">
+        <h1>D&D<span>Service Center</span></h1>
+        <p>Sistem Estimasi Biaya Servis Gadget & Elektronik Profesional</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="devina_container">
+        
+        <!-- Filter / Search -->
+        <div class="devina_filter_wrapper">
+            <input type="text" id="devinaSearch" class="devina_search_input" placeholder="🔍 Cari jenis layanan servis (contoh: Baterai, LCD, Kamera)..." onkeyup="filterService()">
+            <div class="devina_badge_info">Total: 20 Layanan Tersedia</div>
+        </div>
+
+<!-- 20 Item Servis Grid -->
+<div class="devina_grid" id="devinaGrid">
+            
+    <!-- Item 1 -->
+    <div class="devina_card" data-name="ganti baterai hp">
+        <div>
+          <div class="devina_card_icon">🔋</div>
+            <div class="devina_card_title">Ganti Baterai HP</div>  
+              <div class="devina_card_desc">Penggantian baterai original tanam atau non-tanam dengan garansi 3 bulan.</div>
+             </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 150.000</span>
+                    
+                </div>
+        </div>
+
+            <!-- Item 2 -->
+    <div class="devina_card" data-name="ganti lcd layar hp">
+        <div>
+        <div class="devina_card_icon">📱</div>
+        <div class="devina_card_title">Ganti LCD / Layar HP</div>
+        <div class="devina_card_desc">Perbaikan layar retak atau touchscreen tidak berfungsi normal.</div>
+        </div>
+        <div class="devina_card_footer">
+            <span class="devina_price">Rp 350.000</span>
+        </div>
+        </div>
+
+            <!-- Item 3 -->
+    <div class="devina_card" data-name="servis konektor charger">
+        <div>
+            <div class="devina_card_icon">🔌</div>
+            <div class="devina_card_title">Servis Konektor Charger</div>
+            <div class="devina_card_desc">Atasi HP tidak bisa di-charge atau longgar pada port USB/Type-C.</div>
+            </div>
+            <div class="devina_card_footer">
+               <span class="devina_price">Rp 90.000</span>
+            </div>
+            </div>
+
+            <!-- Item 4 -->
+     <div class="devina_card" data-name="perbaikan kamera depan belakang">
+        <div>
+            <div class="devina_card_icon">📷</div>
+                <div class="devina_card_title">Perbaikan Kamera</div>
+                <div class="devina_card_desc">Solusi kamera blur, bergaris, atau gagal memuat aplikasi kamera.</div>
+            </div>
+        <div class="devina_card_footer">
+            <span class="devina_price">Rp 120.000</span>
+        </div>
+    </div>
+
+            <!-- Item 5 -->
+            <div class="devina_card" data-name="ganti kaca belakang backdoor">
+                <div>
+                    <div class="devina_card_icon">✨</div>
+                    <div class="devina_card_title">Ganti Backdoor / Glass</div>
+                    <div class="devina_card_desc">Penggantian kaca penutup belakang HP yang pecah atau baret parah.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 110.000</span>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="devina_card" data-name="servis speaker mic audio">
+                <div>
+                    <div class="devina_card_icon">🔊</div>
+                    <div class="devina_card_title">Servis Speaker & Mic</div>
+                    <div class="devina_card_desc">Atasi suara sember, mati total, atau lawan bicara tidak mendengar suara Anda.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 85.000</span>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="devina_card" data-name="perbaikan hp mati total bootloop">
+                <div>
+                    <div class="devina_card_icon">💻</div>
+                    <div class="devina_card_title">Servis HP Mati Total / Bootloop</div>
+                    <div class="devina_card_desc">Penanganan mesin short, hang logo, atau gagal sistem operasi.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 200.000</span>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="devina_card" data-name="ganti baterai laptop macbook">
+                <div>
+                    <div class="devina_card_icon">🔋</div>
+                    <div class="devina_card_title">Ganti Baterai Laptop</div>
+                    <div class="devina_card_desc">Penggantian baterai laptop drop atau baterai kembung bergaransi.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 350.000</span>
+                </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="devina_card" data-name="upgrade ssd ram laptop pc">
+                <div>
+                    <div class="devina_card_icon">🚀</div>
+                    <div class="devina_card_title">Upgrade SSD / RAM</div>
+                    <div class="devina_card_desc">Percepat performa laptop atau PC Anda dengan komponen berkualitas tinggi.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 250.000</span>
+                </div>
+            </div>
+
+            <!-- Item 10 -->
+            <div class="devina_card" data-name="install ulang windows os software">
+                <div>
+                    <div class="devina_card_icon">💽</div>
+                    <div class="devina_card_title">Install Ulang OS & Software</div>
+                    <div class="devina_card_desc">Instalasi Windows/MacOS lengkap dengan aplikasi pendukung standar kerja.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 100.000</span>
+                </div>
+            </div>
+
+            <!-- Item 11 -->
+            <div class="devina_card" data-name="pembersihan kipas ganti thermal paste laptop">
+                <div>
+                    <div class="devina_card_icon">❄️</div>
+                    <div class="devina_card_title">Cleaning & Thermal Paste</div>
+                    <div class="devina_card_desc">Atasi laptop cepat panas (overheating) dan bising pada kipas pendingin.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 120.000</span>
+                    </div>
+            </div>
+
+            <!-- Item 12 -->
+            <div class="devina_card" data-name="ganti keyboard laptop">
+                <div>
+                    <div class="devina_card_icon">⌨️</div>
+                    <div class="devina_card_title">Ganti Keyboard Laptop</div>
+                    <div class="devina_card_desc">Penggantian keyboard rusak, tombol macet, atau tidak berfungsi sebagian.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 220.000</span>
+                   </div>
+            </div>
+
+            <!-- Item 13 -->
+            <div class="devina_card" data-name="ganti engsel casing laptop patah">
+                <div>
+                    <div class="devina_card_icon">🛠️</div>
+                    <div class="devina_card_title">Servis Engsel & Casing</div>
+                    <div class="devina_card_desc">Perbaikan dudukan baut atau engsel laptop yang patah dan longgar.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 175.000</span>
+                    </div>
+            </div>
+
+            <!-- Item 14 -->
+            <div class="devina_card" data-name="pemberangkatan pembersihan hp masuk air">
+                <div>
+                    <div class="devina_card_icon">💧</div>
+                    <div class="devina_card_title">Treatment HP Masuk Air</div>
+                    <div class="devina_card_desc">Pembersihan mesin ultrasonic anti-korosi akibat cairan atau terendam air.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 130.000</span>
+                    </div>
+            </div>
+
+            <!-- Item 15 -->
+            <div class="devina_card" data-name="buka ic frp mi cloud icloud akun terkunci">
+                <div>
+                    <div class="devina_card_icon">🔓</div>
+                    <div class="devina_card_title">Bypass Akun / FRP / iCloud</div>
+                    <div class="devina_card_desc">Solusi lupa akun Google (FRP), Mi Cloud, atau pembatasan sandi sistem.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 150.000</span>
+                    </div>
+            </div>
+
+            <!-- Item 16 -->
+            <div class="devina_card" data-name="servis tombol power volume flex">
+                <div>
+                    <div class="devina_card_icon">🔘</div>
+                    <div class="devina_card_title">Servis Tombol Power/Volume</div>
+                    <div class="devina_card_desc">Perbaikan fleksibel tombol samping yang keras atau amblas ke dalam.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 75.000</span>
+                    </div>
+            </div>
+
+            <!-- Item 17 -->
+            <div class="devina_card" data-name="ganti ic power ic sinyal ic touchscreen">
+                <div>
+                    <div class="devina_card_icon">⚙️</div>
+                    <div class="devina_card_title">Perbaikan IC Mesin (Reball)</div>
+                    <div class="devina_card_desc">Solusi no signal, no touch, atau mati mendadak karena masalah IC utama.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 300.000</span>
+                     </div>
+            </div>
+
+            <!-- Item 18 -->
+            <div class="devina_card" data-name="pemulihan data harddisk flashdisk hilang">
+                <div>
+                    <div class="devina_card_icon">🗂️</div>
+                    <div class="devina_card_title">Data Recovery</div>
+                    <div class="devina_card_desc">Penyelamatan data foto, video, atau dokumen penting dari memori yang rusak.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 200.000</span>
+                    </div>
+            </div>
+
+            <!-- Item 19 -->
+            <div class="devina_card" data-name="servis wifi bluetooth jaringan laptop hp">
+                <div>
+                    <div class="devina_card_icon">📡</div>
+                    <div class="devina_card_title">Servis Modul WiFi / Bluetooth</div>
+                    <div class="devina_card_desc">Perbaikan masalah perangkat tidak bisa mendeteksi sinyal internet nirkabel.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 110.000</span>
+                    </div>
+            </div>
+
+            <!-- Item 20 -->
+            <div class="devina_card" data-name="pemasangan antigores hydrogel tempered glass">
+                <div>
+                    <div class="devina_card_icon">🛡️</div>
+                    <div class="devina_card_title">Pasang Tempered Glass / Hydrogel</div>
+                    <div class="devina_card_desc">Perlindungan layar anti gores berkualitas tinggi dengan pemasangan presisi.</div>
+                </div>
+                <div class="devina_card_footer">
+                    <span class="devina_price">Rp 35.000</span>
+              </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="devina_footer">
+        <p>&copy; 2026 <span>D&D electronic Service</span>. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

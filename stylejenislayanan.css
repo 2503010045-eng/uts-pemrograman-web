@@ -1,0 +1,197 @@
+/* --- Tema Utama D&D Service (Navy & Putih) --- */
+:root {
+    --navy-bg: #0B132B;
+    --navy-card: #1C2541;
+    --blue-accent: #3A86EF;
+    --blue-hover: #2563EB;
+    --white: #FFFFFF;
+    --text-muted: #94A3B8;
+    --text-main: #101824;
+}
+
+.devina_body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0B132B;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* --- Navigasi Atas --- */
+.devina_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    background-color: transparent;
+}
+
+.devina_logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.devina_nav_links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.devina_nav_links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.devina_nav_links a:hover, 
+.devina_nav_links a.active {
+    opacity: 1;
+}
+
+.devina_btn_nav {
+    background-color: var(--blue-accent);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    opacity: 1 !important;
+}
+
+/* --- Layout Utama (Dua Kolom) --- */
+.devina_hero_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px 80px 60px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Kolom Kiri (Teks & Badge) */
+.devina_hero_left {
+    flex: 1;
+}
+
+.devina_badge {
+    display: inline-block;
+    background-color: rgba(58, 134, 239, 0.15);
+    color: #60A5FA;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border: 1px solid rgba(58, 134, 239, 0.3);
+}
+
+.devina_hero_title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.devina_highlight {
+    color: #38BDF8;
+}
+
+.devina_hero_desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+
+.devina_button_group {
+    display: flex;
+    gap: 16px;
+}
+
+.devina_btn_primary {
+    background-color: #1C2541;
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.devina_btn_primary:hover {
+    background-color: var(--blue-hover);
+}
+
+.devina_btn_secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.devina_btn_secondary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Kolom Kanan (Card Utama) --- */
+.devina_hero_right {
+    flex: 0 0 420px;
+}
+
+.devina_card {
+    background-color: var(--navy-bg);
+    color: var(--text-main);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.devina_card_title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #a9bdeb;
+    margin-bottom: 8px;
+}
+
+.devina_card_desc {
+    font-size: 0.9rem;
+    color: #a9bdeb;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* --- Kotak Per Layanan dengan Efek Transisi Ngambang (Floating Hover) --- */
+.devina_info_container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.devina_info_item {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    /* Efek transisi halus untuk animasi ngambang */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efek saat kursor mendekati kotak (Ngambang / Floating & Naik ke atas sedikit) */
+.devina_info_item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(11, 19, 43,)
+}

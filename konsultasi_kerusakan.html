@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devina Service Center - Konsultasi Kerusakan</title>
+    <link rel="stylesheet" href="stylekonsultasi.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="devina_header">
+        <h1>D&D <span>Service Center</span></h1>
+        <p>Konsultasi Masalah & Diagnosa Kerusakan Perangkat Anda</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="devina_container">
+        <div class="devina_consult_card">
+            <h2 class="devina_section_title"> Form Konsultasi </h2>
+            
+            <form id="devinaConsultForm" onsubmit="handleConsultation(event)">
+                
+                <!-- Nama Pemilik -->
+                <div class="devina_form_group">
+                    <label class="devina_form_label" for="devinaName">Nama Lengkap</label>
+                    <input type="text" id="devinaName" class="devina_form_input" placeholder="Masukkan nama Anda..." required>
+                </div>
+
+                <!-- Jenis Perangkat -->
+                <div class="devina_form_group">
+                    <label class="devina_form_label" for="devinaDevice">Jenis Perangkat</label>
+                    <select id="devinaDevice" class="devina_form_select" required>
+                        <option value="" disabled selected>-- Pilih Perangkat --</option>
+                        <option value="Smartphone Android">Smartphone Android</option>
+                        <option value="iPhone / iOS">iPhone / iOS</option>
+                        <option value="Laptop / Notebook">Laptop / Notebook</option>
+                        <option value="MacBook">MacBook</option>
+                        <option value="Tablet / iPad">Tablet / iPad</option>
+                    </select>
+                </div>
+
+                <!-- Kategori Kerusakan -->
+                <div class="devina_form_group">
+                    <label class="devina_form_label" for="devinaCategory">Kategori Masalah Utama</label>
+                    <select id="devinaCategory" class="devina_form_select" required>
+                        <option value="" disabled selected>-- Pilih Kategori Kendala --</option>
+                        <option value="Baterai & Pengisian">Baterai Drop / Tidak Bisa Di-charge</option>
+                        <option value="Layar & Touchscreen">Layar Retak / Bergaris / Touchscreen Error</option>
+                        <option value="Mesin & Performa">Mati Total / Bootloop / Lambat</option>
+                        <option value="Audio & Kamera">Speaker Sember / Kamera Blur</option>
+                        <option value="Software & Akun">Lupa Sandi / FRP / Error Sistem</option>
+                        <option value="Lainnya">Lainnya (Jelaskan di bawah)</option>
+                    </select>
+                </div>
+
+                <!-- Detail Kerusakan -->
+                <div class="devina_form_group">
+                    <label class="devina_form_label" for="devinaDesc">Deskripsi Kerusakan Secara Detail</label>
+                    <textarea id="devinaDesc" class="devina_form_textarea" placeholder="Jelaskan kronologi atau gejala kerusakan perangkat Anda..." required></textarea>
+                </div>
+
+                <!-- Tombol Submit -->
+                <button type="submit" class="devina_btn_submit">Kirim Konsultasi</button>
+            </form>
+
+            <!-- Hasil Estimasi Respon Konsultasi (Simulasi) -->
+            <div id="devinaResult" class="devina_result_box">
+                <h3>🔍 Analisis Awal Teknisi Devina:</h3>
+                <p id="devinaResultText">Terima kasih telah berkonsultasi. Pesan Anda telah diterima oleh sistem kami.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="devina_footer">
+        <p>&copy; 2026 <span>D&D electronic Service</span>. All Rights Reserved.</p>
+    </footer>
+<script>
+        function handleConsultation(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById('devinaName').value;
+            let device = document.getElementById('devinaDevice').value;
+            let category = document.getElementById('devinaCategory').value;
+            let resultBox = document.getElementById('devinaResult');
+            let resultText = document.getElementById('devinaResultText');
+
+            // Simulasi respon otomatis berdasarkan kategori
+            let advice = "";
+            if(category.includes('Baterai')) {
+                advice = `Halo <strong>${name}</strong>, berdasarkan keluhan pada perangkat <strong>${device}</strong> terkait daya, kemungkinan besar komponen baterai mengalami penurunan fungsi (drop) atau masalah jalur pengisian. Disarankan untuk segera membawanya agar dapat dicek menggunakan alat ukur arus baterai.`;
+            } else if(category.includes('Layar')) {
+                advice = `Halo <strong>${name}</strong>, keluhan pada layar <strong>${device}</strong> biasanya memerlukan penggantian modul LCD atau fleksibel touchscreen jika panel dalam masih aman. Teknisi kami siap melakukan pengecekan fisik gratis.`;
+            } else {
+                advice = `Halo <strong>${name}</strong>, kendala pada <strong>${device}</strong> dengan kategori tersebut memerlukan diagnosa menyeluruh oleh teknisi spesialis kami guna memeriksa kondisi komponen internal.`;
+            }
+
+            resultText.innerHTML = advice;
+            resultBox.style.display = "block";
+            resultBox.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

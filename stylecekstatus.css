@@ -1,0 +1,232 @@
+/*
+  style.css - Website layanan toko service elektronik
+  Nama : devina putri nur aliah| NIM 2503010045
+  Semua class, id, dan variabel diawali "devina" sesuai aturan tugas.
+*/
+
+/* ---------- Variabel warna (nama sendiri) ---------- */
+:root {
+  --devina-navy: #1e293b;
+  --devina-putih: #f8fafc;
+  --devina-biru: #0f172a;
+  --devina-p: #ffffff;
+  --devina-biru-muda: #38bdf8;
+  --devina-baby-blue: #cbd5e1;
+  --devina-hover: #0369a1;
+}
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+#devina_header {
+      background-color: var(--devina-biru-muda);
+      color: var(--devina-baby-blue);
+      padding: 16px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+/* Kotak Pencarian */
+/* Kotak Pencarian (Bentuk Persegi & Warna Navy - Putih Tulang) */
+.devina_search_box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #1e293b; /* Warna Navy */
+  border-radius: 6px; /* Membuat sudutnya kotak (sedikit melengkung halus) */
+  overflow: hidden;
+  background-color: #fdfbf7; /* Warna Putih Tulang */
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+#devina_input_resi {
+  border: none;
+  background: transparent;
+  padding: 10px 15px;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #1e293b; /* Teks Navy */
+}
+
+#devina_input_resi::placeholder {
+  color: #64748b; /* Warna teks placeholder */
+}
+
+.devina_search_box button {
+  background-color: #1e293b; /* Tombol warna Navy */
+  border: none;
+  border-left: 2px solid #1e293b;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fdfbf7; /* Teks tombol putih tulang */
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.devina_search_box button:hover {
+  background-color: #334155; /* Warna navy sedikit lebih terang saat kursor diarahkan */
+}
+
+    body {
+      background-color: #f4f7f6;
+      color: #333;
+      padding: 20px;
+    }
+
+    .devina_container {
+      max-width: 650px;
+      margin: 30px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .devina_header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .devina_header h1 {
+      font-size: 24px;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+
+    .devina_header p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    /* Ringkasan Status */
+    .devina_status_card {
+      background-color: var(--devina-navy);
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    .devina_status_top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+
+    .devina_resi_number {
+      font-size: 18px;
+      font-weight: 700;
+      color: #94bcf3;
+    }
+
+    .devina_badge {
+      background-color: #dbeafe;
+      color: #1d4ed8;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .devina_info_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      font-size: 14px;
+    }
+
+    .devina_info_grid span {
+      display: block;
+      color: #64748b;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    /* Timeline Progres */
+    .devina_timeline_title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #c6c7ca;
+    }
+
+    .devina_timeline {
+      list-style: none;
+      border-left: 2px solid #c6c7ca;
+      margin-left: 10px;
+      padding-left: 20px;
+    }
+
+    .devina_timeline_item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .devina_timeline_item::before {
+      content: "";
+      position: absolute;
+      left: -27px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #94a3b8;
+    }
+
+    .devina_timeline_item.active::before {
+      background-color: #2563eb;
+      box-shadow: 0 0 0 4px #dbeafe;
+    }
+
+    .devina_time {
+      font-size: 12px;
+      color: #c6c7ca;
+      margin-bottom: 4px;
+    }
+
+    .devina_desc {
+      font-size: 14px;
+      font-weight: 600;
+      color: #c6c7ca;
+    }
+
+    .devina_subdesc {
+      font-size: 13px;
+      color: #c6c7ca;
+    }
+
+    /* Footer Tombol */
+    .devina_footer_actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .devina_btn_back {
+      text-decoration: none;
+      color: #c6c7ca;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .devina_btn_cs {
+      text-decoration: none;
+      color: #eceaa2;
+      font-size: 14px;
+      font-weight: 600;
+    }
+ 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Teknisi - D&D Service Center</title>
+    <link rel="stylesheet" href="stylelogin.css">
+</head>
+<body>
+
+    <div class="devina_login_header">
+        <h2>D&D <span>Service Center</span></h2>
+        <p>Portal Khusus Akses Teknisi & Staff</p>
+    </div>
+
+<div class="devina_login_card">
+    <form id="devinaLoginForm" onsubmit="handleLogin(event)">       
+        <div class="devina_form_group">
+        <label for="devinaUsername">Username</label>
+        <input type="text" id="devinaUsername" placeholder="Masukkan username..." required>
+        </div>
+
+        <div class="devina_form_group">
+        <label for="devinaPassword">Password</label>
+        <input type="password" id="devinaPassword" placeholder="Masukkan password..." required>
+        </div>
+
+        <button type="submit" class="devina_btn_login">Masuk Sistem</button>
+        <div id="devinaError" class="devina_error_msg">Username atau Password salah!</div>
+    </form>
+    </div>
+
+    <div class="devina_footer">
+    <p>&copy; 2026 <span>D&D Class</span>. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        function handleLogin(e) {
+            e.preventDefault();
+
+            const user = document.getElementById('devinaUsername').value.trim();
+            const pass = document.getElementById('devinaPassword').value.trim();
+            const errorMsg = document.getElementById('devinaError');
+
+            // Cek password sesuai permintaan: "akubosnya" (Username bebas, misal: teknisi / admin)
+            if (pass === 'akubosnya') {
+                // Simpan sesi login sederhana di sessionStorage
+                sessionStorage.setItem('devina_logged_in', 'true');
+                sessionStorage.setItem('devina_user', user);
+
+                // Berhasil -> Arahkan ke halaman input data resi (pastikan file input data diberi nama input.html atau sesuaikan link-nya)
+                window.location.href = 'inputdatateknisi.html'; 
+            } else {
+                // Gagal -> Tampilkan pesan error
+                errorMsg.style.display = 'block';
+                document.getElementById('devinaPassword').value = '';
+            }
+        }
+    </script>
+</body>
+</html>

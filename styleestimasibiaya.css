@@ -1,0 +1,202 @@
+/* --- DEVINA_CLASS: ROOT & RESET --- */
+        :root {
+            --devina-navy: #0B192C;
+            --devina-light-blue: #1E3E62;
+            --devina-accent-blue: #3B82F6;
+            --devina-cream: #F5EFEB;
+            --devina-yellow: #fce49c;
+            --devina-gray: #94A3B8;
+            --devina-light-gray: #F8FAFC;
+            --devina-white: #FFFFFF;
+            --devina-black: #0F172A;
+            --devina-shadow: 0 10px 30px -5px rgba(11, 25, 44, 0.15);
+            --devina-hover-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--devina-cream);
+            color: var(--devina-black);
+            overflow-x: hidden;
+        }
+
+        /* --- DEVINA_CLASS: HEADER & HERO --- */
+        .devina_header {
+            background: linear-gradient(135deg, var(--devina-navy), var(--devina-light-blue));
+            color: var(--devina-white);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: var(--devina-shadow);
+            position: relative;
+        }
+
+        .devina_header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.55rem;
+            letter-spacing: 1px;
+        }
+
+        .devina_header h1 span {
+            color: var(--devina-yellow);
+        }
+
+        .devina_header p {
+            color: var(--devina-gray);
+            font-size: 1.1rem;
+        }
+
+        /* --- DEVINA_CLASS: CONTAINER --- */
+        .devina_container {
+            max-width: 1200px;
+            margin: -30px auto 4rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- DEVINA_CLASS: FILTER SEARCH BAR --- */
+        .devina_filter_wrapper {
+            background: var(--devina-white);
+            padding: 1.5rem;
+            border-radius: 20px;
+            box-shadow: var(--devina-shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .devina_search_input {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.8rem 1.2rem;
+            border: 2px solid var(--devina-light-gray);
+            border-radius: 12px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .devina_search_input:focus {
+            border-color: var(--devina-accent-blue);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        .devina_badge_info {
+            background: var(--devina-cream);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--devina-navy);
+            font-size: 0.9rem;
+        }
+
+        /* --- DEVINA_CLASS: GRID & FLOATING CARDS --- */
+        .devina_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .devina_card {
+            background: var(--devina-white);
+            border-radius: 20px;
+            padding: 1.8rem;
+            box-shadow: var(--devina-shadow);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            /* Efek ilusi mengambang */
+            transform: translateY(0);
+        }
+
+        .devina_card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--devina-hover-shadow);
+            border-color: var(--devina-accent-blue);
+        }
+
+        .devina_card_icon {
+            width: 50px;
+            height: 50px;
+            background: var(--devina-light-gray);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .devina_card_title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--devina-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .devina_card_desc {
+            font-size: 0.9rem;
+            color: var(--devina-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .devina_card_footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--devina-light-gray);
+            padding-top: 1rem;
+        }
+
+        .devina_price {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--devina-light-blue);
+        }
+
+        .devina_btn_select {
+            background: var(--devina-navy);
+            color: var(--devina-white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .devina_btn_select:hover {
+            background: var(--devina-accent-blue);
+        }
+
+        /* --- DEVINA_CLASS: FOOTER COPYRIGHT --- */
+        .devina_footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--devina-gray);
+            font-size: 0.9rem;
+            background: var(--devina-navy);
+            color: var(--devina-white);
+            margin-top: 4rem;
+        }
+
+        .devina_footer span {
+            color: var(--devina-yellow);
+        }
+    
